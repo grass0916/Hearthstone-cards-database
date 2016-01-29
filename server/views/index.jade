@@ -1,0 +1,65 @@
+doctype html
+html
+	head
+		title 爐石戰記卡牌
+		link(rel='stylesheet' type='text/css' href='/lib/semantic-ui/semantic.min.css')
+		script(src='/lib/semantic-ui/semantic.min.js')
+
+	body
+		div.ui.container
+			div.ui.segment
+				table.ui.selectable.fixed.celled.table
+					thead
+						tr
+							td 名稱
+							td 品質
+							td 類別
+							td 種族
+							td 職業
+							td 魔力
+							td 攻擊
+							td 血量
+							td 描述
+					tbody
+						each card in cards
+							tr(id=card.id)
+								td
+									p #{card.name}
+									if (categories.set.indexOf(card.set) > -1)
+										img(src='/img/card_set/Set_' + card.set + '.png')
+								td
+									if (categories.rarity.indexOf(card.rarity) > -1)
+										img(src='/img/card_rarity/' + card.rarity + '.png')
+								td
+									p #{card.type}
+								td
+									p #{card.race}
+								td
+									if (categories.playerClass.indexOf(card.playerClass) > -1)
+										img(src='/img/hero_icon/' + card.playerClass + '.png')
+								td
+									if (card.cost !== undefined)
+										p #{card.cost}
+										img(src='/img/card_attribute/mana.png')
+									else
+										p -
+								td
+									if (card.attack !== undefined)
+										p #{card.attack}
+										if (card.durability === undefined)
+											img(src='/img/card_attribute/damage.png')
+										else
+											img(src='/img/card_attribute/weapon_damage.png')
+									else
+										p -
+								td
+									if (card.health !== undefined)
+										p #{card.health}
+										img(src='/img/card_attribute/health.png')
+									else if (card.durability !== undefined)
+										p #{card.durability}
+										img(src='/img/card_attribute/weapon_durability.png')
+									else
+										p -
+								td
+									p !{card.text}
