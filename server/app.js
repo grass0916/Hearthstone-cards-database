@@ -40,7 +40,7 @@ router
 // Enable the koa web server.
 app
 	// Set the static files path.
-	.use(static('static'))
+	.use(static('./server/static'))
 	// Set routes.
 	.use(router.routes())
 	.use(router.allowedMethods())

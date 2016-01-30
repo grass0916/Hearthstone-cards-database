@@ -14,7 +14,7 @@ exports.categories = {
 	set         : ['EXPERT1', 'GVG', 'TGT', 'NAXX', 'BRM', 'LOE', 'CORE', 'REWARD', 'PROMO'],
 };
 
-var allCards = JSON.parse(fs.readFileSync('./data/cards.json', 'utf8'));
+var allCards = JSON.parse(fs.readFileSync('./server/data/cards.json', 'utf8'));
 
 exports.all = function all() {
 	return allCards;

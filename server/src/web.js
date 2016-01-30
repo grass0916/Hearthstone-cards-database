@@ -12,7 +12,7 @@ exports.core = {
 			categories: cards.categories,
 			cards: cards.collectible()
 		};
-		var html  = jade.renderFile('./views/index.jade', options);
+		var html  = jade.renderFile('./server/views/index.jade', options);
 		// Write the HTML.
 		this.body = html;
 	}

@@ -1,0 +1,272 @@
+/* Cards */
+
+div.cards {
+	font-family: 'Comic Sans MS', 'Arial', 'Microsoft JhengHei', 'Microsoft YaHei';
+	-webkit-touch-callout: none;
+	  -webkit-user-select: none;
+	     -moz-user-select: none;
+	      -ms-user-select: none;
+	          user-select: none;
+}
+
+/* Card */
+
+div.card {
+	display: inline-block;
+	position: relative;
+	width: 400px;
+	height: 170px;
+	margin: 10px 15px;
+	overflow: hidden;
+}
+
+/* Thumbnail */
+
+div.card .thumbnail {
+	position: absolute;
+	top: 15px;
+	width: 120px;
+	height: 120px;
+	background: #FFF;
+	border: 5px solid #FFF;
+	border-radius: 500px;
+	overflow: hidden;
+	margin: 0;
+	z-index: 2;
+}
+
+div.card .thumbnail img {
+	position: absolute;
+}
+
+div.card[type='MINION'] .thumbnail img {
+	top: -52%;
+	left: -47%;
+	width: 195%;
+}
+
+div.card[type='WEAPON'] .thumbnail img, div.card[type='SPELL'] .thumbnail img {
+	top: -70%;
+	left: -62%;
+	width: 220%;
+}
+
+div.card .thumbnail .type {
+	position: absolute;
+	bottom: 0px;
+	width: 120px;
+	color: #FFF;
+	font-size: 0.85em;
+	text-shadow: 1px 0px 1px #000, 1px 1px 1px #000, 0px 1px 1px #000, -1px 1px 1px #000, -1px 0px 1px #000, -1px -1px 1px #000, 0px -1px 1px #000, 1px -1px 1px #000;
+	text-align: center;
+	background: rgba(255, 255, 255, 0.65);
+	padding-top: 0.25em;
+	padding-bottom: 0.65em;
+	border-top: 1px dashed rgba(255, 255, 255, 1);
+}
+
+div.card[type='MINION'] .thumbnail .type {
+	background: rgba(254, 173, 50, 0.65);
+	border-top: 1px dashed rgba(254, 173, 50, 1);
+}
+
+div.card[type='WEAPON'] .thumbnail .type {
+	background: rgba(175, 175, 175, 0.65);
+	border-top: 1px dashed rgba(175, 175, 175, 1);
+}
+
+div.card[type='SPELL'] .thumbnail .type {
+	background: rgba(89, 195, 216, 0.65);
+	border-top: 1px dashed rgba(89, 195, 216, 1);
+}
+
+/* Rarity */
+
+div.card .rarity {
+	position: absolute;
+	top: 132px;
+	left: 55px;
+	width: 20px;
+	height: 26px;
+	z-index: 3;
+}
+
+div.card[rarity='COMMON'] .rarity {
+	background: url('/img/card_rarity/COMMON.png') no-repeat;
+}
+
+div.card[rarity='RARE'] .rarity {
+	background: url('/img/card_rarity/RARE.png') no-repeat;
+}
+
+div.card[rarity='EPIC'] .rarity {
+	background: url('/img/card_rarity/EPIC.png') no-repeat;
+}
+
+div.card[rarity='LEGENDARY'] .rarity {
+	background: url('/img/card_rarity/LEGENDARY.png') no-repeat;
+}
+
+div.card[rarity] .rarity {
+	background-size: 20px 26px;
+}
+
+div.card[rarity='LEGENDARY'] .rarity-dragon {
+	position: absolute;
+	top: 6px;
+	left: 12px;
+	width: 147px;
+	height: 100px;
+	z-index: 3;
+	background: url('/img/card_rarity/legendary_dragon.png') no-repeat;
+	background-size: 147px 100px;
+}
+
+/* Player class */
+
+div.card .class {
+	position: absolute;
+	top: 10px;
+	right: 16px;
+	width: 24px;
+	height: 24px;
+	z-index: 4;
+}
+
+div.card[playerClass='DRUID'] .class {
+	background: url('/img/hero_icon/DRUID.png') no-repeat;
+}
+
+div.card[playerClass='HUNTER'] .class {
+	background: url('/img/hero_icon/HUNTER.png') no-repeat;
+}
+
+div.card[playerClass='MAGE'] .class {
+	background: url('/img/hero_icon/MAGE.png') no-repeat;
+}
+
+div.card[playerClass='PALADIN'] .class {
+	background: url('/img/hero_icon/PALADIN.png') no-repeat;
+}
+
+div.card[playerClass='PRIEST'] .class {
+	background: url('/img/hero_icon/PRIEST.png') no-repeat;
+}
+
+div.card[playerClass='ROGUE'] .class {
+	background: url('/img/hero_icon/ROGUE.png') no-repeat;
+}
+
+div.card[playerClass='SHAMAN'] .class {
+	background: url('/img/hero_icon/SHAMAN.png') no-repeat;
+}
+
+div.card[playerClass='WARLOCK'] .class {
+	background: url('/img/hero_icon/WARLOCK.png') no-repeat;
+}
+
+div.card[playerClass='WARRIOR'] .class {
+	background: url('/img/hero_icon/WARRIOR.png') no-repeat;
+}
+
+div.card[playerClass] .class {
+	background-size: 24px 24px;
+}
+
+/* Profile */
+
+div.card .profile {
+	width: 243px;
+	height: 150px;
+	background: #EEE;
+	box-shadow: 1px 1px 5px #000;
+	border-radius: 5px;
+	margin: 1px 1px 1px 65px;
+	padding: 6px 10px 6px 80px;
+}
+
+/* Profile - Name */
+
+div.card .profile .name {
+	width: 210px;
+	color: #FFF;
+	font-size: 1.25em;
+	text-shadow: 1px 0px 1px #000, 1px 1px 1px #000, 0px 1px 1px #000, -1px 1px 1px #000, -1px 0px 1px #000, -1px -1px 1px #000, 0px -1px 1px #000, 1px -1px 1px #000;
+	white-space: nowrap;
+	letter-spacing: 0.1em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	padding: 0 0 0.15em 0.25em;
+	border-bottom: 1px dashed #FFF;
+}
+
+/* Profile - Ability */
+
+div.card .profile ul.ability {
+	display: flex;
+	text-align: center;
+	list-style-type: none;
+	padding: 2px 10px;
+	margin: 2px 0 4px 0;
+}
+
+div.card .profile ul.ability li {
+	width: 100%;
+	border-left: 1px solid #FFF;
+	font-size: 1.5em;
+	font-weight: 700;
+	color: #FFF;
+	text-shadow: 1px 0px 1px #000, 1px 1px 1px #000, 0px 1px 1px #000, -1px 1px 1px #000, -1px 0px 1px #000, -1px -1px 1px #000, 0px -1px 1px #000, 1px -1px 1px #000;
+}
+
+div.card .profile ul.ability li.cost {
+	background: url('/img/card_attribute/mana.png') center center no-repeat;
+	background-size: 35px 35px;
+}
+
+div.card .profile ul.ability li.attack {
+	background: url('/img/card_attribute/damage.png') center center no-repeat;
+	background-size: 35px 35px;
+}
+
+div.card .profile ul.ability li.weapon-attack {
+	background: url('/img/card_attribute/weapon_damage.png') center center no-repeat;
+	background-size: 35px 35px;
+}
+
+div.card .profile ul.ability li.health {
+	background: url('/img/card_attribute/health.png') center center no-repeat;
+	background-size: 35px 35px;
+}
+
+div.card .profile ul.ability li.durability {
+	background: url('/img/card_attribute/weapon_durability.png') center center no-repeat;
+	background-size: 35px 35px;
+}
+
+div.card .profile ul.ability li:first-child {
+	border: 0px none;
+}
+
+/* Profile - Description */
+
+div.card .profile .description {
+	height: 70px;
+	background: rgba(255, 255, 255, 0.75);
+	border-radius: 5px;
+}
+
+div.card .profile .description .text {
+	position: relative;
+	width: 100%;
+	max-height: 70px;
+	font-size: 0.95em;
+	text-align: justify;
+	text-shadow: 1px 1px 1px #BBB, 1px 0px 1px #BBB, 0px 1px 1px #BBB;
+	line-height: 1.35em;
+	letter-spacing: 0.08em;
+	word-wrap: break-word;
+	overflow: scroll;
+	overflow-x: hidden;
+	padding: 5px 50px 5px 5px;
+}
